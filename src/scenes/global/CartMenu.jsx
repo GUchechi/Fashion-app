@@ -48,7 +48,49 @@ const CartMenu = () => {
         width="max(400px, 30%)"
         height="100%"
         backgroundColor="white"
-      ></Box>
+      >
+        <Box padding="30px" overflow="auto" height="100%">
+          {/* Header */}
+          <FlexBox mb="15px">
+            <Typography variant="h3">SHOPPING BAG ({cart.length})</Typography>
+            <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
+              <CloseIcon />
+            </IconButton>
+          </FlexBox>
+
+          {/* CART LIST */}
+          <Box>
+            {cart.map((item) => (
+              <Box key={`${item.attributes.name}-${item.id}`}>
+                <FlexBox p="15px 0">
+                  <Box flex="1 1 40%">
+                    <img
+                      alt={item?.name}
+                      width="123px"
+                      height="164px"
+                      src={`http://localhost:2000${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                    />
+                  </Box>
+                  <Box flex="1 1 60%">
+                    <FlexBox mb="5px">
+                      <Typography fontWeight="bold">
+                        {item.attributes.name}
+                      </Typography>
+                      <IconButton
+                        onClick={() =>
+                          dispatch(removeFromCart({ id: item.id }))
+                        }
+                      >
+                        <CloseIcon />
+                      </IconButton>
+                    </FlexBox>
+                  </Box>
+                </FlexBox>
+              </Box>
+            ))}
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };
