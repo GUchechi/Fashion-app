@@ -72,6 +72,7 @@ const CartMenu = () => {
                     />
                   </Box>
                   <Box flex="1 1 60%">
+                    {/* Item Name */}
                     <FlexBox mb="5px">
                       <Typography fontWeight="bold">
                         {item.attributes.name}
@@ -83,6 +84,24 @@ const CartMenu = () => {
                       >
                         <CloseIcon />
                       </IconButton>
+                    </FlexBox>
+                    <Typography>{item.attributes.shortDescription}</Typography>
+
+                    {/* Amount */}
+                    <FlexBox m="15px 0">
+                      <Box
+                        display="flex"
+                        alignItems="center"
+                        border={`1.5px solid ${shades.neutral[500]}`}
+                      >
+                        <IconButton
+                          onClick={() =>
+                            dispatch(decreaseCount({ id: item.id }))
+                          }
+                        >
+                          <RemoveIcon />
+                        </IconButton>
+                      </Box>
                     </FlexBox>
                   </Box>
                 </FlexBox>
