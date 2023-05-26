@@ -41,6 +41,12 @@ const Navbar = () => {
             {" "}
             FASHION
           </Box>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            columnGap="20px"
+            zIndex="2"
+          ></Box>
         </Box>
       </Box>
     </Box>
