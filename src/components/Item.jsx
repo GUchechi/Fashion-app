@@ -42,6 +42,31 @@ const Item = ({ item, width }) => {
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
         />
+        <Box
+          display={isHovered ? "block" : "none"}
+          position="absolute"
+          bottom="10%"
+          left="0"
+          width="100%"
+          padding="0 5%"
+        >
+          <Box display="flex" justifyContent="space-between">
+            <Box
+              display="flex"
+              alignItems="center"
+              backgroundColor={shades.neutral[100]}
+              borderRadius="3px"
+            >
+              <IconButton onClick={() => setCount(Math.max(count - 1, 1))}>
+                <RemoveIcon />
+              </IconButton>
+              <Typography color={shades.primary[300]}>{count}</Typography>
+              <IconButton onClick={() => setCount(count + 1)}>
+                <AddIcon />
+              </IconButton>
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
