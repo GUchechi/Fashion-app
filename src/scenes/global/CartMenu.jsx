@@ -20,6 +20,15 @@ const FlexBox = styled(Box)`
 `;
 
 const CartMenu = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.cart);
+  const isCartOpen = useSelector((state) => state.cart.isCartOpen);
+
+  const totalPrice = cart.reduce((total, item) => {
+    return total + item.count * item.attributes.price;
+  }, 0);
+
   return <div>CartMenu</div>;
 };
 
