@@ -29,7 +29,19 @@ const CartMenu = () => {
     return total + item.count * item.attributes.price;
   }, 0);
 
-  return <div>CartMenu</div>;
+  return (
+    <Box
+      display={isCartOpen ? "block" : "none"}
+      backgroundColor="rgba(0, 0, 0, 0.4)"
+      position="fixed"
+      zIndex={10}
+      width="100%"
+      height="100%"
+      left="0"
+      top="0"
+      overflow="auto"
+    ></Box>
+  );
 };
 
 export default CartMenu;
