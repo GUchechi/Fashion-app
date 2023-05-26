@@ -30,7 +30,7 @@ const CartMenu = () => {
   }, 0);
 
   return (
-    <Box
+    <Box //overlay
       display={isCartOpen ? "block" : "none"}
       backgroundColor="rgba(0, 0, 0, 0.4)"
       position="fixed"
@@ -40,7 +40,16 @@ const CartMenu = () => {
       left="0"
       top="0"
       overflow="auto"
-    ></Box>
+    >
+      <Box //Modal
+        position="fixed"
+        right="0"
+        bottom="0"
+        width="max(400px, 30%)"
+        height="100%"
+        backgroundColor="white"
+      ></Box>
+    </Box>
   );
 };
 
