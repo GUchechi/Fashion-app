@@ -51,6 +51,7 @@ const Item = ({ item, width }) => {
           padding="0 5%"
         >
           <Box display="flex" justifyContent="space-between">
+            {/* AMOUNT */}
             <Box
               display="flex"
               alignItems="center"
@@ -65,6 +66,16 @@ const Item = ({ item, width }) => {
                 <AddIcon />
               </IconButton>
             </Box>
+
+            {/* BUTTON */}
+            <Button
+              onClick={() => {
+                dispatch(addToCart({ item: { ...item, count } }));
+              }}
+              sx={{ backgroundColor: shades.primary[300], color: "white" }}
+            >
+              Add to Cart
+            </Button>
           </Box>
         </Box>
       </Box>
