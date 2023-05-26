@@ -24,7 +24,15 @@ const Navbar = () => {
       top="0"
       left="0"
       zIndex="1"
-    ></Box>
+    >
+      <Box
+        width="80%"
+        margin="auto"
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      ></Box>
+    </Box>
   );
 };
 
