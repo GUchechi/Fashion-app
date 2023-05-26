@@ -31,7 +31,18 @@ const Navbar = () => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-      ></Box>
+      >
+        <Box>
+          <Box
+            onClick={() => navigate("/")}
+            sx={{ "&:hover": { cursor: "pointer" } }}
+            color={shades.secondary[500]}
+          >
+            {" "}
+            FASHION
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };
