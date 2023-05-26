@@ -46,7 +46,20 @@ const Navbar = () => {
             justifyContent="space-between"
             columnGap="20px"
             zIndex="2"
-          ></Box>
+          >
+            <IconButton sx={{ color: "black" }}>
+              <SearchOutlined />
+            </IconButton>
+            <IconButton sx={{ color: "black" }}>
+              <PersonOutline />
+            </IconButton>
+            <IconButton sx={{ color: "black" }}>
+              <ShoppingBagOutlined />
+            </IconButton>
+            <IconButton sx={{ color: "black" }}>
+              <MenuOutlined />
+            </IconButton>
+          </Box>
         </Box>
       </Box>
     </Box>
