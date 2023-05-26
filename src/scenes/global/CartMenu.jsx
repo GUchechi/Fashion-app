@@ -13,10 +13,14 @@ import {
 } from "../../state";
 import { useNavigate } from "react-router-dom";
 
-const CartMenu = () => {
-  return (
-    <div>CartMenu</div>
-  )
-}
+const FlexBox = styled(Box)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-export default CartMenu
+const CartMenu = () => {
+  return <div>CartMenu</div>;
+};
+
+export default CartMenu;
