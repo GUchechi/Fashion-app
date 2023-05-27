@@ -13,7 +13,7 @@ const ShoppingList = () => {
   const [value, setValue] = useState("all");
   const items = useSelector((state) => state.cart.items);
   const breakPoint = useMediaQuery("(min-width:600px)");
-  console.log('items' , items)
+  console.log("items", items);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -26,7 +26,7 @@ const ShoppingList = () => {
     );
     const itemsJson = await items.json();
     dispatch(setItems(itemsJson.data));
-  }
+  };
 
   useEffect(() => {
     getItems();
@@ -44,10 +44,13 @@ const ShoppingList = () => {
     (item) => item.attributes.category === "bestSellers"
   );
 
-
   return (
-    <div>ShoppingList</div>
-  )
-}
+    <Box width="80%" margin="80px auto">
+      <Typography variant="h3" textAlign="center">
+        Our Featured <b>Products</b>
+      </Typography>
+    </Box>
+  );
+};
 
-export default ShoppingList
+export default ShoppingList;
