@@ -80,9 +80,13 @@ const ShoppingList = () => {
           items.map((item) => (
             <Item item={item} key={`${item.name}-${item.id}`} />
           ))}
-          ))}
+          ))
         {value === "newArrivals" &&
           newArrivalsItems.map((item) => (
+            <Item item={item} key={`${item.name}-${item.id}`} />
+          ))}
+          {value === "bestSellers" &&
+          bestSellersItems.map((item) => (
             <Item item={item} key={`${item.name}-${item.id}`} />
           ))}
       </Box>
