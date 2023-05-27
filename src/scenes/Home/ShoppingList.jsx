@@ -63,11 +63,19 @@ const ShoppingList = () => {
           },
         }}
       >
-            <Tab label="ALL" value="all" />
+        <Tab label="ALL" value="all" />
         <Tab label="NEW ARRIVALS" value="newArrivals" />
         <Tab label="BEST SELLERS" value="bestSellers" />
         <Tab label="TOP RATED" value="topRated" />
       </Tabs>
+      <Box
+        margin="0 auto"
+        display="grid"
+        gridTemplateColumns="repeat(auto-fill, 300px)"
+        justifyContent="space-around"
+        rowGap="20px"
+        columnGap="1.33%"
+      ></Box>
     </Box>
   );
 };
