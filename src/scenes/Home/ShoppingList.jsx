@@ -75,7 +75,12 @@ const ShoppingList = () => {
         justifyContent="space-around"
         rowGap="20px"
         columnGap="1.33%"
-      ></Box>
+      >
+         {value === "all" &&
+          items.map((item) => (
+            <Item item={item} key={`${item.name}-${item.id}`} />
+          ))}
+      </Box>
     </Box>
   );
 };
