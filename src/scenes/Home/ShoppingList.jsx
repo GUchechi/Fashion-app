@@ -18,10 +18,20 @@ const ShoppingList = () => {
     setValue(newValue);
   };
 
+  const getItems = async () => {
+    const items = await fetch(
+      "http://localhost:2000/api/items?populate=image",
+      { method: "GET" }
+    );
+    const itemsJson = await items.json();
+    dispatch(setItems(itemsJson.data));
+  };
 
-  return (
-    <div>ShoppingList</div>
-  )
-}
+  useEffect(() => {
+    getItems();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-export default ShoppingList
+  return <div>ShoppingList</div>;
+};
+
+export default ShoppingList;
