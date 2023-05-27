@@ -36,6 +36,10 @@ const ShoppingList = () => {
     (item) => item.attributes.category === "topRated"
   );
 
+  const newArrivalsItems = items.filter(
+    (item) => item.attributes.category === "newArrivals"
+  );
+
   return (
     <div>ShoppingList</div>
   )
