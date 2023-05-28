@@ -34,12 +34,18 @@ const ItemsDetails = () => {
     setItem(itemJson.data);
   }
 
+  async function getItems() {
+    const items = await fetch(
+      `http://localhost:1337/api/items?populate=image`,
+      {
+        method: "GET",
+      }
+    );
+    const itemsJson = await items.json();
+    setItems(itemsJson.data);
+  }
 
-
-  useEffect(() => {
-    getItem();
-    getItems();
-  }, [itemId]); // eslint-disable-line react-hooks/exhaustive-deps
+  
 
   return (
     <Box width="80%" m="80px auto">
