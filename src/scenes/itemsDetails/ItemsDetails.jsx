@@ -23,16 +23,7 @@ const ItemsDetails = () => {
     setValue(newValue);
   };
 
-  async function getItem() {
-    const item = await fetch(
-      `http://localhost:1337/api/items/${itemId}?populate=image`,
-      {
-        method: "GET",
-      }
-    );
-    const itemJson = await item.json();
-    setItem(itemJson.data);
-  }
+ 
 
   async function getItems() {
     const items = await fetch(
