@@ -54,7 +54,15 @@ const ItemsDetails = () => {
     <Box width="80%" m="80px auto">
       <Box display="flex" flexWrap="wrap" columnGap="40px">
         {/* IMAGES */}
-       
+        <Box flex="1 1 40%" mb="40px">
+          <img
+            alt={item?.name}
+            width="100%"
+            height="100%"
+            src={`http://localhost:2000${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+            style={{ objectFit: "contain" }}
+          />
+        </Box>
 
         {/* ACTIONS */}
         <Box flex="1 1 50%" mb="40px">
