@@ -37,7 +37,7 @@ const Checkout = () => {
   };
 
   async function makePayment(values) {
-    // const stripe = await stripePromise;
+    const stripe = await stripePromise;
     const requestBody = {
       userName: [values.firstName, values.lastName].join(" "),
       email: values.email,
@@ -53,9 +53,9 @@ const Checkout = () => {
       body: JSON.stringify(requestBody),
     });
     const session = await response.json();
-    // await stripe.redirectToCheckout({
-    //   sessionId: session.id,
-    // });
+    await stripe.redirectToCheckout({
+      sessionId: session.id,
+    });
   }
 
   return (
