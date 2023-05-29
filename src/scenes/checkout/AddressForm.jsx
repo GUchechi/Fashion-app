@@ -118,18 +118,7 @@ const AddressForm = ({
         helperText={formattedHelper("state")}
         sx={{ gridColumn: "1fr" }}
       />
-      <TextField
-        fullWidth
-        type="text"
-        label="Zip Code"
-        onBlur={handleBlur}
-        onChange={handleChange}
-        value={values.zipCode}
-        name={formattedName("zipCode")}
-        error={formattedError("zipCode")}
-        helperText={formattedHelper("zipCode")}
-        sx={{ gridColumn: "1fr" }}
-      />
+      
     </Box>
   );
 };
