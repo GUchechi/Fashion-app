@@ -58,18 +58,7 @@ const AddressForm = ({
         helperText={formattedHelper("lastName")}
         sx={{ gridColumn: "span 2" }}
       />
-      <TextField
-        fullWidth
-        type="text"
-        label="Country"
-        onBlur={handleBlur}
-        onChange={handleChange}
-        value={values.country}
-        name={formattedName("country")}
-        error={formattedError("country")}
-        helperText={formattedHelper("country")}
-        sx={{ gridColumn: "span 4" }}
-      />
+     
       <TextField
         fullWidth
         type="text"
