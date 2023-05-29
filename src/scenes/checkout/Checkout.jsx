@@ -94,7 +94,7 @@ const Checkout = () => {
                   setFieldValue={setFieldValue}
                 />
               )}
-              {/* {isSecondStep && (
+              {isSecondStep && (
                 <Payment
                   values={values}
                   errors={errors}
@@ -103,7 +103,7 @@ const Checkout = () => {
                   handleChange={handleChange}
                   setFieldValue={setFieldValue}
                 />
-              )} */}
+              )}
               <Box display="flex" justifyContent="space-between" gap="50px">
                 {!isFirstStep && (
                   <Button
