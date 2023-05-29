@@ -22,8 +22,7 @@ const AddressForm = ({
         getIn(errors, formattedName(field))
     );
 
-  const formattedHelper = (field) =>
-    getIn(touched, formattedName(field)) && getIn(errors, formattedName(field));
+
 
   return (
     <Box
