@@ -19,16 +19,16 @@ const ShoppingList = () => {
     setValue(newValue);
   };
 
-  const getItems = async () => {
-    const items = await fetch(
-      "http://localhost:1337/api/items?populate=image",
-      { method: "GET" }
-    );
-    const itemsJson = await items.json();
-    dispatch(setItems(itemsJson.data));
-  };
-
+  // Get Item
   useEffect(() => {
+    const getItems = async () => {
+      const items = await fetch(
+        "http://localhost:1337/api/items?populate=image",
+        { method: "GET" }
+      );
+      const itemsJson = await items.json();
+      dispatch(setItems(itemsJson.data));
+    };
     getItems();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
