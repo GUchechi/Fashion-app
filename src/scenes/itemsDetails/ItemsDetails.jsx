@@ -19,7 +19,10 @@ const ItemsDetails = () => {
   const [item, setItem] = useState(null);
   const [items, setItems] = useState([]);
 
- 
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   async function getItem() {
     const item = await fetch(
       `http://localhost:1337/api/items/${itemId}?populate=image`,
