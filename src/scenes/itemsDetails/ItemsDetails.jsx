@@ -45,7 +45,11 @@ const ItemsDetails = () => {
     setItems(itemsJson.data);
   }
 
- 
+  useEffect(() => {
+    getItem();
+    getItems();
+  }, [itemId]); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <Box width="80%" m="80px auto">
       <Box display="flex" flexWrap="wrap" columnGap="40px">
