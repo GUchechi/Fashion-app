@@ -13,9 +13,6 @@ export const cartSlice = createSlice({
     setItems: (state, action) => {
       state.items = action.payload;
     },
-    setIsCartOpen: (state) => {
-      state.isCartOpen = !state.isCartOpen;
-    },
     addToCart: (state, action) => {
       state.cart = [...state.cart, action.payload.item];
     },
